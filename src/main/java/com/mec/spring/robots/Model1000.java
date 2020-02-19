@@ -1,8 +1,5 @@
 package com.mec.spring.robots;
 
-import com.mec.spring.interfaces.Hang;
-import com.mec.spring.interfaces.Head;
-import com.mec.spring.interfaces.Leg;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
@@ -12,22 +9,22 @@ public class Model1000 extends BaseModel implements InitializingBean, Disposable
     private int year;
     private boolean soundEnabled;
 
-    public Model1000(Head head, Hang hand, Leg leg) {
-        super(head, hand, leg);
-    }
+//    public Model1000(Head head, Hang hand, Leg leg) {
+//        super(head, hand, leg);
+//    }
+//
+//    public Model1000(Head head, Hang hand, Leg leg, String color, int year, boolean soundEnabled) {
+//        super(head, hand, leg);
+//        this.color = color;
+//        this.year = year;
+//        this.soundEnabled = soundEnabled;
+//    }
 
-    public Model1000(Head head, Hang hand, Leg leg, String color, int year, boolean soundEnabled) {
-        super(head, hand, leg);
-        this.color = color;
-        this.year = year;
-        this.soundEnabled = soundEnabled;
-    }
-
-    public Model1000(String color, int year, boolean soundEnabled) {
-        this.color = color;
-        this.year = year;
-        this.soundEnabled = soundEnabled;
-    }
+//    public Model1000(String color, int year, boolean soundEnabled) {
+//        this.color = color;
+//        this.year = year;
+//        this.soundEnabled = soundEnabled;
+//    }
 
     public String getColor() {
         return color;

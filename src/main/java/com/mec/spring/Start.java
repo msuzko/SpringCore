@@ -16,7 +16,7 @@ public class Start {
 //        Robot terminator3 = t1000Conveyor.createRobot();
 //        System.out.println("Terminator1 " + terminator1);
 //        System.out.println("Terminator2 " + terminator2);
-//        System.out.println("Terminator3 " + terminator3);
+//        System.out.printl n("Terminator3 " + terminator3);
 //
 //        terminator1.action();
 //        T1000PoolList pool = context.getBean("t1000GoldenPoolFromList", T1000PoolList.class);
