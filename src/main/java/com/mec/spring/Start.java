@@ -1,13 +1,14 @@
 package com.mec.spring;
 
-import com.mec.spring.interfaces.impls.T1000PoolList;
+import com.mec.spring.robots.Model1000;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Start {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("all_context.xml");
-        //Model1000 t1000 = context.getBean("t1000", Model1000.class);
+        Model1000 t1000 = context.getBean("t1000", Model1000.class);
+        t1000.action();
 
 //        RobotConveyor t1000Conveyor = context.getBean("t1000Conveyor", RobotConveyor.class);
 //        Robot terminator1 = t1000Conveyor.createRobot();
@@ -18,7 +19,7 @@ public class Start {
 //        System.out.println("Terminator3 " + terminator3);
 //
 //        terminator1.action();
-        T1000PoolList pool = context.getBean("t1000GoldenPoolFromList", T1000PoolList.class);
-        pool.action();
+//        T1000PoolList pool = context.getBean("t1000GoldenPoolFromList", T1000PoolList.class);
+//        pool.action();
     }
 }
