@@ -18,7 +18,7 @@ public class Start {
 //        System.out.println("Terminator3 " + terminator3);
 //
 //        terminator1.action();
-        T1000PoolList pool = context.getBean("t1000Pool", T1000PoolList.class);
+        T1000PoolList pool = context.getBean("t1000GoldenPoolFromList", T1000PoolList.class);
         pool.action();
     }
 }

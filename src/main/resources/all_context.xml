@@ -12,6 +12,15 @@
         <lookup-method name="createRobot" bean="t1000"/>
     </bean>
 
+    <bean id="t1000GoldenPoolFromMap" class="com.mec.spring.interfaces.impls.T1000PoolList">
+        <property name="robotCollection"
+                         value="#{t1000PoolMap.robotCollection.values().?[color.toUpperCase() eq 'GOLD']}"/>
+    </bean>
+    <bean id="t1000GoldenPoolFromList" class="com.mec.spring.interfaces.impls.T1000PoolList">
+        <property name="robotCollection"
+                  value="#{t1000PoolList.robotCollection.?[color.toUpperCase() eq 'GOLD']}"/>
+    </bean>
+
     <bean id="t1000PoolList" class="com.mec.spring.interfaces.impls.T1000PoolList">
         <property name="robotCollection">
             <list>
@@ -20,6 +29,11 @@
                     <constructor-arg value="gold" index="3" type="java.lang.String"/>
                     <constructor-arg value="2007" index="4" type="int"/>
                     <constructor-arg value="false" index="5" type="boolean"/>
+                </bean>
+                <bean class="com.mec.spring.robots.Model1000" parent="baseModel" scope="prototype">
+                    <constructor-arg value="silver" index="3" type="java.lang.String"/>
+                    <constructor-arg value="2005" index="4" type="int"/>
+                    <constructor-arg value="true" index="5" type="boolean"/>
                 </bean>
             </list>
         </property>
@@ -35,6 +49,13 @@
                         <constructor-arg value="gold" index="3" type="java.lang.String"/>
                         <constructor-arg value="2007" index="4" type="int"/>
                         <constructor-arg value="false" index="5" type="boolean"/>
+                    </bean>
+                </entry>
+                <entry key="Terminator 3">
+                    <bean class="com.mec.spring.robots.Model1000" parent="baseModel" scope="prototype">
+                        <constructor-arg value="silver" index="3" type="java.lang.String"/>
+                        <constructor-arg value="2005" index="4" type="int"/>
+                        <constructor-arg value="true" index="5" type="boolean"/>
                     </bean>
                 </entry>
             </map>

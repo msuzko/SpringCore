@@ -40,7 +40,7 @@
           p:hand-ref="toshibaHand" p:leg-ref="sonyLeg" p:head-ref="toshibaHead"
           depends-on="databaseBean">
 
-        <constructor-arg value="silver" index="0" type="java.lang.String"/>
+        <constructor-arg value="Gold" index="0" type="java.lang.String"/>
         <constructor-arg value="2005" index="1" type="int"/>
         <constructor-arg value="true" index="2" type="boolean"/>
         <!--        setters-->
