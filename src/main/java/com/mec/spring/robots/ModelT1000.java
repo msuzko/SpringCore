@@ -1,36 +1,56 @@
 package com.mec.spring.robots;
 
+import com.mec.spring.enums.ColorStyle;
+import com.mec.spring.interfaces.Hang;
+import com.mec.spring.interfaces.Head;
+import com.mec.spring.interfaces.Leg;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
-public class Model1000 extends BaseModel implements InitializingBean, DisposableBean {
+@Component
+public class ModelT1000 extends BaseModel implements InitializingBean, DisposableBean {
 
-    private String color;
+    private ColorStyle color;
     private int year;
     private boolean soundEnabled;
 
-//    public Model1000(Head head, Hang hand, Leg leg) {
-//        super(head, hand, leg);
-//    }
-//
-//    public Model1000(Head head, Hang hand, Leg leg, String color, int year, boolean soundEnabled) {
-//        super(head, hand, leg);
-//        this.color = color;
-//        this.year = year;
-//        this.soundEnabled = soundEnabled;
-//    }
+    public ModelT1000() {
+    }
 
-//    public Model1000(String color, int year, boolean soundEnabled) {
-//        this.color = color;
-//        this.year = year;
-//        this.soundEnabled = soundEnabled;
-//    }
+    @Bean
+    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public ModelT1000 model1() {
+        return new ModelT1000();
+    }
 
-    public String getColor() {
+    @Bean
+    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public ModelT1000 model2() {
+        return new ModelT1000(ColorStyle.BLACK,2005,true);
+    }
+
+    public ModelT1000(Head head, Hang hand, Leg leg, ColorStyle color, int year, boolean soundEnabled) {
+//        super(head, hand, leg);
+        this.color = color;
+        this.year = year;
+        this.soundEnabled = soundEnabled;
+    }
+
+    public ModelT1000(ColorStyle color, int year, boolean soundEnabled) {
+        this.color = color;
+        this.year = year;
+        this.soundEnabled = soundEnabled;
+    }
+
+    public ColorStyle getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(ColorStyle color) {
         this.color = color;
     }
 

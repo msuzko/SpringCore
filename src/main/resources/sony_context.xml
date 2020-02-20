@@ -5,8 +5,8 @@
        default-lazy-init="true"
 >
 
-    <bean id="sonyHead" class="com.mec.spring.sony.HeadSony"/>
-    <bean id="sonyHand" class="com.mec.spring.sony.HandSony"/>
-    <bean id="sonyLeg" class="com.mec.spring.sony.LegSony"/>
+<!--    <bean id="sonyHead" class="com.mec.spring.sony.HeadSony"/>-->
+<!--    <bean id="sonyHand" class="com.mec.spring.sony.HandSony"/>-->
+<!--    <bean id="sonyLeg" class="com.mec.spring.sony.LegSony"/>-->
 
 </beans>

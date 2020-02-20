@@ -5,11 +5,9 @@ import com.mec.spring.interfaces.Head;
 import com.mec.spring.interfaces.Leg;
 import com.mec.spring.interfaces.Robot;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 public abstract class BaseModel implements Robot {
     @Autowired
-    @Qualifier("sonyHead")
     private Head head;
     @Autowired
     private Hang hand;

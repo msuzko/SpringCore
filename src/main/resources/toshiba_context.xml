@@ -7,8 +7,8 @@
 >
 
     <!--    scope="prototype" - создает новый эекземпляр-->
-    <bean id="toshibaHead" class="com.mec.spring.toshiba.HeadToshiba" scope="prototype"/>
-    <bean id="toshibaHand" class="com.mec.spring.toshiba.HandToshiba"/>
-    <bean id="toshibaLeg" class="com.mec.spring.toshiba.LegToshiba"/>
+<!--    <bean id="toshibaHead" class="com.mec.spring.toshiba.HeadToshiba" scope="prototype"/>-->
+<!--    <bean id="toshibaHand" class="com.mec.spring.toshiba.HandToshiba"/>-->
+<!--    <bean id="toshibaLeg" class="com.mec.spring.toshiba.LegToshiba"/>-->
 
 </beans>

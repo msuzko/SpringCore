@@ -1,14 +1,16 @@
 package com.mec.spring;
 
-import com.mec.spring.robots.Model1000;
+import com.mec.spring.robots.ModelT1000;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Start {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("all_context.xml");
-        Model1000 t1000 = context.getBean("t1000", Model1000.class);
-        t1000.action();
+        ModelT1000 model1 = context.getBean("model1", ModelT1000.class);
+        ModelT1000 model2 = context.getBean("model2", ModelT1000.class);
+        model1.action();
+        model2.action();
 
 //        RobotConveyor t1000Conveyor = context.getBean("t1000Conveyor", RobotConveyor.class);
 //        Robot terminator1 = t1000Conveyor.createRobot();
